@@ -7,7 +7,7 @@ import gsap from "gsap";
 import { Draggable } from "gsap/Draggable";
 gsap.registerPlugin(Draggable);
 
-// GUI configurator
+// GUI configurator only for testing
 const gui = new GUI();
 
 let draggableItem: string | boolean = localStorage.getItem("draggableEnable")!;
@@ -39,7 +39,8 @@ const debugObject = {
     window.location.reload();
   },
 };
-////
+
+//// CLASS EXAMPLE
 
 const title = document.querySelector("#active-ani")!;
 const descriptionElements = gsap.utils.toArray("#desc-el");
@@ -80,6 +81,8 @@ const dscElementAni = gsap.timeline().from(descriptionElements, {
 
 dscElementAni.id = "Main Title";
 
+// I am using debugObject to show debug panel.But the class could instantiated like this infested
+
 new GSAPController({
   animations: [squareTl, circle, dscElementAni], // pass a single tween ot tl or and array of them
   Draggable: debugObject.draggableEnable && Draggable, // draggable instance to make it draggable.
@@ -96,6 +99,21 @@ new GSAPController({
     title.textContent = tl.id;
   },
 });
+
+// I am using debugObject to show debug panel. But the class could instantiated like this infested
+
+// new GSAPController({
+//   animations: [squareTl, circle, dscElementAni],
+//   Draggable,
+//   onStart: (tl) => {
+//     title.textContent = tl.id;
+//   },
+//   onSelectAnimationChange: (tl) => {
+//     title.textContent = tl.id;
+//   },
+// });
+
+//// END OF EXAMPLE
 
 // Debugger GUI
 
