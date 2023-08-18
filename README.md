@@ -1,6 +1,10 @@
 # controller-class
 
 ```js
+import gsap from "gsap";
+import { Draggable } from "gsap/Draggable";
+gsap.registerPlugin(Draggable);
+
 // Define your GSAP animations using `gsap.to()` or `gsap.timeline()`, and give them distinct IDs for better identification:
 
 const squareTl = gsap.timeline({ paused: true });
@@ -93,7 +97,6 @@ The GSAP Controller package offers the ability to make the controller itself dra
 1. First, make sure you have the necessary modules imported at the beginning of your script:
 
 ```javascript
-import GSAPController from "gsap-controller";
 import Draggable from "gsap/Draggable.js";
 import gsap from "gsap";
 gsap.registerPlugin(Draggable);
