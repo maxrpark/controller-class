@@ -123,6 +123,21 @@ class GSAPController {
 
     this.setStyles();
     this.createController();
+
+    this.sliderEvent();
+    this.handleSelectAnimation();
+
+    this.pauseButtonActions();
+    this.reverseButtonAction();
+    this.restartButtonAction();
+    this.repeatButtonAction();
+
+    // callback
+    this.onStart(this.timeLine);
+
+    this.onUpdate();
+
+    if (this.Draggable) this.createDraggable();
   }
 
   createController() {
@@ -209,21 +224,6 @@ class GSAPController {
 
     this.animationProgress.style.minWidth = "40px";
     this.animationProgress.style.textAlign = "end";
-
-    this.sliderEvent();
-    this.handleSelectAnimation();
-
-    this.pauseButtonActions();
-    this.reverseButtonAction();
-    this.restartButtonAction();
-    this.repeatButtonAction();
-
-    // callback
-    this.onStart(this.timeLine);
-
-    this.onUpdate();
-
-    if (this.Draggable) this.createDraggable();
   }
 
   sliderEvent() {
