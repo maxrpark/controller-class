@@ -88,12 +88,12 @@ class GSAPController {
       throw new Error("Invalid or missing 'animations' parameter.");
     }
 
-    this.animations = !animations[0] ? [animations] : animations;
-    this.parentSelector = parentSelector || null;
-
     if (Draggable && typeof Draggable !== "function") {
       throw new Error("No gsap Draggable found");
     }
+
+    this.animations = !animations[0] ? [animations] : animations;
+    this.parentSelector = parentSelector || null;
 
     this.animations.forEach((animation: any, idx: number) => {
       if (!animation.id) {
