@@ -73,6 +73,7 @@ const circle = gsap.to(".circle", {
   paused: true,
   scale: 2,
 });
+
 const dscElementAni = gsap.timeline().from(descriptionElements, {
   yPercent: 100,
   opacity: 0,

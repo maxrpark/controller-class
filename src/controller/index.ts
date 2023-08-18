@@ -247,8 +247,8 @@ class GSAPController {
 
       if (this.timeLine.id === value) return;
 
-      this.timeLine.seek(0);
-      this.timeLine.paused(!this.timeLine.paused());
+      this.timeLine.paused(true);
+      this.timeLine.progress(0);
       this.repeatButton.style.background = this.buttonColor;
 
       this.timeLine = this.animations.find((ani) => ani.id === value);
