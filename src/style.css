@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Josefin+Sans&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #242424;
+}
+
+a {
+  display: block;
+  color: rgb(255, 166, 0);
+  margin-top: 1rem;
+  font-size: 1.25rem;
+}
+
+.section-center {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem;
+  color: rgba(255, 255, 255, 0.87);
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.package-desc {
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.example-section p {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.square {
+  width: 50px;
+  height: 50px;
+  background: red;
+}
+.circle {
+  width: 50px;
+  height: 50px;
+  background: green;
+  border-radius: 50%;
+  margin-top: 2rem;
+}
